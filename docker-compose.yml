@@ -1,0 +1,14 @@
+version: "2.4"
+
+services:
+  factorial_server:
+    build: .
+    volumes:
+      - .:/src
+    working_dir: /src
+    command: python main.py
+    ports:
+      - "8080:8080"
+
+    mem_limit: 1024m
+    mem_reservation: 500m
